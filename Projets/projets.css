@@ -1,0 +1,323 @@
+/* ===== VARIABLES Happy Hues #14 ===== */
+:root {
+    --bg:        #fffffe;
+    --headline:  #272343;
+    --paragraph: #2d334a;
+    --accent:    #ffd803;
+    --secondary: #e3f6f5;
+    --tertiary:  #bae8e8;
+}
+.projects-hero{
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 3rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.projects-hero h1 {
+    font-family: 'ClashDisplay-Bold', sans-serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    color: var(--headline);
+    margin: 0 0 1.5rem;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.projects-hero h1 em {
+    font-style: italic;
+    color: var(--tertiary);
+}
+
+.projects-hero p {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--paragraph);
+    max-width: 500px;
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.section-divider {
+    max-width: 1400px;
+    margin: 0 auto 3rem;
+}
+
+.divider-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--tertiary), transparent);
+}
+
+
+.projects-grid{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    justify-content: center;
+}
+.project-card {
+    background: var(--secondary);
+    border: 2px solid #bae8e8;
+    border-radius: 20px;    
+    animation: none;
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    background: var(--bg);
+    box-shadow: 0 30px 60px rgba(39, 35, 67, 0.12);
+}
+
+
+.card-large {
+  grid-column: span 7;
+}
+
+.card-medium {
+  grid-column: span 5;
+}
+
+.card-inner {
+    padding: 2.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    min-height: 320px;
+}
+
+.card-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--paragraph);
+    letter-spacing: 2px;
+    opacity: 0.4;
+}
+
+.card-title {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: var(--headline);
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+}
+
+.card-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    color: var(--paragraph);
+    line-height: 1.65;
+    margin: 0 0 1.5rem;
+    font-weight: 300;
+    opacity: 0.75;
+}
+
+.card-header{
+    display: flex;  
+    justify-content: space-between;
+    margin: 0 0 1rem;
+}
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--paragraph);
+    text-decoration: none;
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+
+.projects-grid:hover .project-card {
+  opacity: 0.5;
+}
+
+.projects-grid .project-card:hover {
+  opacity: 1;
+}
+
+.card-link:hover svg,
+.project-card:hover .card-link  {
+    color: var(--accent);
+    transform: translate(3px, -3px);
+    transition: transform 0.2s ease, color 0.2s ease;
+    transform: scale(1.5);
+
+}
+
+/* From Uiverse.io by WhiteNervosa */ 
+.customCheckBoxHolder {
+  margin: 5px;
+  display: flex;
+}
+
+.customCheckBox {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  background-color: rgba(0, 0, 0, 0.16);
+  border-radius: 0px;
+  color: rgba(255, 255, 255, 0.7);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: color, background-color, box-shadow;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+  outline: none;
+  justify-content: center;
+  min-width: 55px;
+}
+
+.customCheckBox:hover {
+  background-color: var(--accent);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBox .inner {
+  font-size: 18px;
+  font-weight: 900;
+  font-family: 'Outfit', sans-serif;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: transform;
+  transform: translateY(0px);
+}
+
+.customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 0px;
+}
+
+.customCheckBoxInput {
+  display: none;
+}
+
+.customCheckBoxInput + .customCheckBoxWrapper .customCheckBox {
+  background-color: var(--paragraph);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+
+.customCheckBoxInput + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: var(--accent);
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+/* ── Aperçu iframe (miniature du site live) ── */
+.card-iframe-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1.5px solid var(--tertiary);
+    background: var(--bg);
+    margin: 1rem 0 1.5rem;
+    /* essentiel : sans ça, le scroll/clic dans l'iframe vole
+       l'event et le clic sur la carte ne déclenche plus rien */
+    pointer-events: none;
+}
+
+.card-iframe-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* on affiche la page en taille réelle (250%) puis on la réduit
+       avec scale() : ça donne une vraie miniature du site plutôt
+       qu'une simple portion zoomée en haut à gauche */
+    width: 250%;
+    height: 250%;
+    border: none;
+    transform: scale(0.4);
+    transform-origin: top left;
+}
+
+.project-card:hover .card-iframe-wrap {
+    border-color: var(--accent);
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.block{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+
+@media screen and (max-width:700px) {
+    .projects-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 16px;
+    }
+    .card-large {
+        grid-column: span 1;
+        }
+
+    .card-medium {
+        grid-column: span 1;
+    }
+    
+}
+
+@media screen and (max-width:470px) {
+    .projects-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 16px;
+    }
+    .card-large {
+        grid-column: span 1;
+        }
+
+    .card-medium {
+        grid-column: span 1;
+    }
+    
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../panier/panier.css">
+
+    <!-- Feuille de style du bandeau -->
+    <link rel="stylesheet" href="../bandeau/bandeau.css">
+</head>
+<body>
+
+    <!-- Intégration du bandeau -->
+    <iframe src="../bandeau/bandeau.html" 
+            id="bandeau-frame" 
+            title="Bandeau"></iframe>
+
+    <main>
+        <div class="contenu-panier">
+            <h1 id="panier">Votre Panier</h1>
+            <ul>
+                <li>
+                    <h2>Article 1</h2>
+                    <div class="article">
+                        <a href="../page-produit/page-produit-1.html"><img id="article1" src = "../assets/montres/mickey1.png"></img></a>
+                        <ul>
+                            <h3>Mickey Astronaut</h3>
+                            <p>
+                                This Disney x Folex Mickey Mouse Astronaut watch, with an impeccably detailed space- themed dial, features so much to fascinate over.
+                            </p>
+                        </ul>
+                        <h4>PRIX : 34,999.50$</h4>
+                    </div>
+                </li>
+                <li>
+                    <h2>Article 2</h2>
+                    <div class="article">
+                        <a href="../page-produit/page-produit-4.html"><img id="article2" src = "../assets/montres/mickey4.png"></img></a>
+                        <ul>
+                            <h3>Alpine Mickey Mouse</h3>
+                            <p>
+                                The always-intrepid Disney Mickey Mouse scales new heights with this boxed set inspired by the short 1936 animated film, “Alpine Climber.”
+                            </p>
+                        </ul>
+                        <h4>PRIX : 34,999.50$</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="colonne_droite">
+            <div class="paiement">
+                <h2>Récapitulatif</h2>
+                <p1>Panier (2 articles)   69,999.00$</p1>
+                <ul>
+                    <p>Livraison express Gratuit</p>
+                    <img id="service-paiement" src="../assets/logo/icons8-payementmethode-791x315.jpg.png" width="250" height="100" alt="Moyens de paiement"></img>
+                </ul>
+                <button>Paiement</button>
+            </div>
+            <div class="authentification">
+                <h3>Authentification/Garantie</h3>
+                    <p>
+                        Chaque montre que nous proposons est minutieusement vérifiée par nos horlogers certifiés.  
+                        Nous garantissons l’authenticité, la traçabilité et la conformité de chaque pièce avant expédition.  
+                        Un certificat nominatif accompagne systématiquement votre commande.
+                    </p>
+                    <a href="#">En savoir plus</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

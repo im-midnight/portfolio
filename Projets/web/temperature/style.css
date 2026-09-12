@@ -1,0 +1,117 @@
+body{
+    background: linear-gradient(to left bottom, rgb(9, 226, 255), rgb(101, 255, 171));
+    display: flex;
+    height: 97vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.donnees{
+    width: 600px;
+    height: 500px;
+    border-style: solid;
+    border-radius: 50px;
+}
+h1{
+    font-family : system-ui;
+    padding: 5px;
+    margin-left: 120px;
+}
+.premier{
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: rgb(111, 248, 216);
+    border: solid;
+    border-radius: 10px;
+}
+p{
+    font-family: system-ui;
+    font-size: 25px;
+    margin-left: 60px;
+}
+.deuxieme{
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: rgb(111, 248, 216);
+    border: solid;
+    border-radius: 10px;
+}
+.bouton{
+    padding: 16px;
+    font-size: 20px;
+    margin-left: 220px;   
+    border: solid;
+    border-radius: 10px;
+    background-color: rgb(88, 237, 203);
+}
+.bouton:focus{
+    border: 3px solid #000000;
+    box-shadow: 0px 2px 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.bouton2{
+    padding: 5px;
+    font-size: 20px;
+    margin-left: 480px;   
+    margin-top: 50px;
+    border: solid;
+    border-radius: 10px;
+    background-color: rgb(88, 237, 203);
+    cursor: pointer;
+}
+.bouton2:focus{
+    border: 3px solid #000000;
+    box-shadow: 0px 2px 4px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+input[type = "number"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    margin-left: 40px;
+    border: solid;
+    border-radius: 50px;
+    background-color: rgb(111, 248, 216);
+    box-sizing: border-box;
+    border: 3px solid #050505;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    cursor: pointer;
+     
+}
+input[type=number]:focus {
+    border: 3px solid #000000;
+    box-shadow: 0px 2px 4px;
+  }
+select {
+    /* Reset Select */
+    appearance: none;
+    outline: 10px rgb(95, 236, 255);
+    box-shadow: none;
+    /* Personalize */
+    -webkit-transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px;
+}
+select:focus{
+    border: 3px solid #000000;
+    box-shadow: 0px 2px 7px;
+}
+
+/* Masquer les flèches dans un input type="number" */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

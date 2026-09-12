@@ -1,0 +1,191 @@
+/* particule.css — page projet "Système de Particules"
+   Réutilise les variables et polices définies dans style.css
+   (chargé avant celui-ci dans le <head>), on ne redéfinit rien ici. */
+
+.page-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 9rem var(--gutter) 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ── Lien retour ── */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--paragraph);
+    opacity: 0.6;
+    text-decoration: none;
+    margin-bottom: 3rem;
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+.back-link svg {
+    transition: transform 0.2s ease;
+}
+.back-link:hover {
+    opacity: 1;
+    color: var(--headline);
+    transform: translateX(-2px);
+}
+.back-link:hover svg {
+    transform: translateX(-3px);
+}
+
+/* ── Hero du projet ── */
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.hero-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--paragraph);
+    opacity: 0.55;
+}
+
+.hero-title {
+    font-family: 'ClashDisplay-Bold', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 700;
+    color: var(--headline);
+    line-height: 1.08;
+}
+.hero-title em {
+    font-style: italic;
+    color: #e8baba;
+}
+
+.hero-desc {
+    font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.05rem);
+    line-height: 1.75;
+    max-width: 560px;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-top: 0.3rem;
+}
+
+/* ── Badges tech ── */
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--headline);
+    background: var(--secondary);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 100px;
+    padding: 6px 14px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.badge:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* variantes de couleur, même logique que .teaser-tag / .tag existants */
+.badge.purple {
+    background: var(--tertiary);
+}
+.badge.orange {
+    background: var(--bg);
+    border-color: var(--accent);
+}
+
+/* ── Boutons ── */
+.hero-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 28px;
+    background: var(--headline);
+    color: var(--accent);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-github:hover {
+    background: var(--accent);
+    color: var(--headline);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 35, 67, 0.2);
+}
+
+/* ── Capture / vidéo du projet ── */
+.hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screenshot-main {
+
+    overflow: hidden;
+}
+.screenshot-main video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(39, 35, 67, 0.15);
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 948px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .hero-right {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-wrap {
+        padding: 2rem 20px 4rem;
+    }
+    .hero-btns,
+    .badge-row {
+        gap: 8px;
+    }
+    .btn-github {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/font/css/clash-display.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="../acceuil.css" rel="stylesheet">
+    <link href="projets.css" rel="stylesheet">
+    <title>Kevin Phomasone — Projets</title>
+</head>
+<body>
+    <div id="progress"></div>
+    <div class="parent">
+        
+         <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <li><a href="../acceuil.html">K<span>.</span></a></li>
+            </div>
+            <div class="nav-center">
+                <ul>
+                    <li><a href="../acceuil.html">Home</a></li>
+                    <li><a href="projet.html">Projets</a></li>
+                    <li><a href="../acceuil.html#about">À propos</a></li>
+                </ul>  
+            </div>
+            <div class="nav-right">
+                <button><li><a href="#contact">Contact</a></li></button>
+            </div>
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <!-- Menu Mobile-->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../acceuil.html">Home</a>
+            <a href="projet.html">Projets</a>
+            <a href="../acceuil.html#about">À propos</a>
+            <a href="../acceuil.html#contact" class="btn-contact-mob">Contact</a>
+        </div>
+
+        <!-- Hero -->
+        <div class="projects-hero">
+            <h1>Mes <em>Projets</em></h1>
+            <p>Découvrez mes réalisations académiques et personnelles, façonnées avec curiosité et passion pour le code.</p>
+        </div>
+
+        <!-- Divider -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+
+        </div>
+
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+
+            <!-- Card 1 - Large -->
+            <div class="block project-card card-large">
+                <div class="card-inner">
+                    <div class="card-header">
+                        <span class="card-number">01</span>
+                        <a href="../acceuil.html" class="card-link">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M1 13L13 1M13 1H5M13 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Portfolio Personnel</h2>
+                        <p class="card-desc">Site web de présentation développé en BUT Informatique. Design responsive avec navigation fluide, section projets et formulaire de contact intégré.</p>
+                        <!-- <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>                         -->
+
+                        <div class="card-iframe-wrap">
+                            <iframe src="../acceuil.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+
+                        <div class="customCheckBoxHolder">
+
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">HTML</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB2" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB2">
+                                <div class="customCheckBox">
+                                    <div class="inner">CSS</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB3" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB3">
+                                <div class="customCheckBox">
+                                    <div class="inner">JAVASCRIPT</div>
+                                </div>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 - Medium -->
+            <div class="block project-card card-medium" >
+                <div class="card-inner">
+                    <div class="card-header">
+                        <span class="card-number">02</span>
+                        <a href="particule/particule.html" class="card-link">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M1 13L13 1M13 1H5M13 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Systeme de Particule</h2>
+                        <p class="card-desc">Projet Golang en 1ère Annee BUT INFO. Développement d'un moteur de simulation 2D en utilisant Ebitengine</p>
+                        
+                        <div class="card-iframe-wrap">
+                            <iframe src="particule/particule.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+
+                        <div class="customCheckBoxHolder">
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">Golang</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">Ebitengine</div>
+                                </div>
+                            </label>
+                        </div>
+
+             
+                            
+               
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 - Small -->
+            <div class="block project-card card-medium">
+                <div class="card-inner">
+                    <div class="card-header">
+                        <span class="card-number">03</span>
+                        <a href="mario/mario.html" class="card-link">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M1 13L13 1M13 1H5M13 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Mario Maker</h2>
+                        <p class="card-desc">Projet fin d'anneé developé en Terminal avec 4 personne</p>
+
+                        <div class="card-iframe-wrap">
+                            <iframe src="mario/mario.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+
+                        <div class="customCheckBoxHolder">
+
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">Python</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">Pygame</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block project-card card-large" >
+                <div class="card-inner">
+                    <div class="card-header">
+                        <span class="card-number">04</span>
+                        <a href="web/web.html" class="card-link">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M1 13L13 1M13 1H5M13 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h2 class="card-title">Web Html</h2>
+                        <p class="card-desc">Sites Web développés avec HTML/CSS/JAVASCRIPT</p>
+
+                        <div class="card-iframe-wrap">
+                            <iframe src="web/web.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+
+                        <div class="customCheckBoxHolder">
+
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">HTML</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB2" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB2">
+                                <div class="customCheckBox">
+                                    <div class="inner">CSS</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB3" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB3">
+                                <div class="customCheckBox">
+                                    <div class="inner">JAVASCRIPT</div>
+                                </div>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block project-card card-large" >
+                <div class="card-inner">
+                    <div class="card-header">
+                        <span class="card-number">05</span>
+                        <a href="flip7/flip7.html" class="card-link">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M1 13L13 1M13 1H5M13 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h2 class="card-title">Flip 7</h2>
+                        <p class="card-desc">Développement d'une application - thème Flip7</p>
+
+                        <div class="card-iframe-wrap">
+                            <iframe src="flip7/flip7.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+
+                        <div class="customCheckBoxHolder">
+
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">Kotlin</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB2" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB2">
+                                <div class="customCheckBox">
+                                    <div class="inner">Gradle</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB2" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB2">
+                                <div class="customCheckBox">
+                                    <div class="inner">JavaFX</div>
+                                </div>
+                            </label>
+
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="block project-card card-medium" >
+                <div class="card-inner">
+                    <div class="card-header">
+                        <span class="card-number">06</span>
+                        <a href="analyse/analyse.html" class="card-link">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M1 13L13 1M13 1H5M13 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h2 class="card-title">Analyse de réseau social</h2>
+                        <p class="card-desc">Visualisation des réseaux sociaux</p>
+
+                        <div class="card-iframe-wrap">
+                            <iframe src="analyse/analyse.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+                        
+                        <div class="customCheckBoxHolder">
+
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">Python</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB2" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB2">
+                                <div class="customCheckBox">
+                                    <div class="inner">Graphviz</div>
+                                </div>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+    <script>
+        const menuHamburger = document.querySelector(".hamburger")
+        const navLinks = document.querySelector(".mobile-menu")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('open') // Rajout la classe mobile menu au variable navLinks
+        })
+        // Ferme le menu dès qu'on clique sur un lien à l'intérieur
+        const navLinksMobile = document.querySelectorAll('.mobile-menu a')
+        navLinksMobile.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open')
+            })
+        })
+    </script>
+</html>

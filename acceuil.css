@@ -1,0 +1,1286 @@
+/*Couleur Happy Hues */
+:root {
+    --bg:        #fffffe;
+    --headline:  #272343;
+    --paragraph: #2d334a;
+    --accent:    #ffd803;
+    --secondary: #e3f6f5;
+    --tertiary:  #bae8e8;
+
+    /* gouttières fluides réutilisées partout à la place de 60px en dur */
+    --gutter: clamp(20px, 5vw, 60px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* évite que les fonts rétrécissent automatiquement sur mobile (iOS Safari) */
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    /* la vraie cause des barres de scroll horizontales sur mobile :
+       un enfant trop large (ex: contact-form-card) pousse le body.
+       on bloque ça ici en filet de sécurité */
+    overflow-x: hidden;
+    background-color: var(--bg);
+    color: var(--paragraph);
+    font-family: 'Outfit', sans-serif;
+}
+
+.reveal {
+    opacity: 0;
+
+    animation: appear linear;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+    transform: translateY(50px); 
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+} 
+
+#progress {
+    z-index: 9999;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 5px; 
+    background: var(--accent);
+    transform-origin: 0 50%;
+    transform: scaleX(0); /* firefox ne support pas */
+    animation: growProgress linear;
+    animation-timeline: scroll(nearest);
+}
+/* HOme page */
+
+
+@keyframes growProgress { 
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+
+section{
+    /* height:100vh fixe coupait le contenu dès qu'une section (about, formation,
+       contact) était plus haute que l'écran, surtout sur mobile en portrait.
+       min-height garde le même rendu desktop mais laisse la section grandir. */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+
+.home{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    align-items: center;
+    padding: 1rem var(--gutter) 4rem;
+    min-height: calc(100vh - 72px);
+}
+nav {
+    padding: 0 var(--gutter);
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg);
+    border-bottom: 1.5px solid var(--tertiary);
+    position: sticky;
+    top: 0; 
+    z-index: 999;
+}
+
+/* NavBar Menu navigation */
+.nav-center ul{
+    display: flex;
+    gap:5px;
+}
+
+li{
+    list-style: none;
+}
+.nav-center li a{
+    padding: 8px 16px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #272343;
+    transition: background 0.2s, color 0.2s;
+    
+}
+.nav-center li a:hover {
+    border-radius: 8px;
+    background-color: var(--secondary);
+}
+
+/* Button Contact */
+
+.nav-right button {border:none;}
+
+.nav-right button li a{
+    font-family: 'DM Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 10px 22px;
+    color :var(--accent);
+
+    background-color: var(--headline);
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+
+}
+
+.nav-right button li a:hover{
+    color: var(--headline);
+    background-color: var(--accent);
+}
+
+
+/* Nav left */
+.nav-left li a {
+    font-family: 'ClashDisplay-Bold', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--headline);
+    text-decoration: none
+}
+.nav-left li a span {
+    color: var(--accent);
+}
+
+.nav-left li a:hover {
+    color : var(--accent);
+    cursor: pointer;
+    text-decoration: none
+}
+.nav-left li a:hover span {
+    color: var(--headline);
+}
+
+/* premier section */
+
+.name-introduction{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.name{
+    font-family: 'ClashDisplay-Bold', sans-serif;
+    font-size: clamp(2.6rem, 5vw, 4.8rem);
+    font-weight: 700;
+    color: var(--headline);
+    line-height: 1.05;
+}
+.subtitle {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    color: var(--paragraph);
+    font-weight: 400;
+}
+.hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.cta-primary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    
+    align-content: center;
+    padding: 10px 30px;
+    background: var(--accent);
+    color: var(--headline);
+ 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+.cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(249, 212, 0, 0.572);
+}
+
+.cta-secondary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    
+    align-content: center;
+    padding: 10px 30px;
+    background: transparent;
+    color: var(--headline);
+
+    border: 2px solid var(--tertiary);
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+.cta-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(130, 202, 235, 0.45);
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-wrapper {
+    padding: 5px;
+    border-radius: 20px;
+    border: dashed;
+    border-color: var(--tertiary);
+    /* évite que la photo déborde du parent grid sur mobile avant que
+       .home passe en 1 colonne (entre 600px et 948px par ex) */
+    max-width: 100%;
+}
+.image-wrapper img{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    box-shadow: 0 20px 60px rgba(39, 35, 67, 0.15);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 22px;
+    right: var(--gutter);
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    background: none;
+    border: none;
+    z-index: 300;
+}
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--headline);
+    border-radius: 2px;
+    transition: width 0.25s ease, background 0.2s ease, transform 0.25s ease;
+    transform-origin: left center;
+}
+.hamburger:hover span:nth-child(2) {
+    width: 16px;
+    background-color: var(--accent);
+
+}
+
+.mobile-menu {
+    margin-left: -100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg);
+    padding: 80px 36px 36px;
+    z-index: 200;
+    transition: opacity 0.28s ease, margin-left 0.28s ease, transform 0.28s ease;
+}
+
+.mobile-menu a {
+    padding: 14px 18px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--paragraph);
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.2s, color 0.2s, padding-left 0.2s;
+    border-left: 3px solid transparent;
+}
+.mobile-menu a:hover {
+    background: var(--secondary);
+    color: var(--headline);
+    padding-left: 24px;
+    border-left-color: var(--accent);
+}
+.mobile-menu .btn-contact-mob {
+    margin-top: 16px;
+    padding: 14px 22px;
+    background: var(--headline);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-left: none;
+    transition: background 0.2s, color 0.2s;
+}
+.mobile-menu .btn-contact-mob:hover {
+    background: var(--accent);
+    color: var(--headline);
+    padding-left: 22px;
+    border-left-color: transparent;
+}
+
+/* Responsive navabar */
+
+@media screen and (max-width: 948px) {
+    .nav-center,.nav-right{
+        display: none;
+    }
+    .nav-left{
+        position: absolute;
+        top:17px;
+        left: var(--gutter);
+    }
+    .hamburger{
+        display: flex;
+    }
+    .mobile-menu{
+        opacity: 0;
+        margin-left: -100%;
+    }
+    .home {
+        grid-template-columns: 1fr;
+        padding: 3rem 28px 2.5rem;
+        min-height: auto;
+        gap: 2.5rem;
+    }
+    .img{
+        order:-1;
+    }
+}
+.open{
+    margin-left: 0;
+    opacity: 1;
+    transition: opacity 0.28s ease, margin-left 0.28s ease, transform 0.28s ease;
+}
+
+
+/* 2e section PROJET */
+
+.projets {
+    display: flex;
+    align-items: center;
+}
+
+.projets-teaser {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.teaser-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.teaser-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--paragraph);
+    opacity: 0.5;
+}
+
+.teaser-title-main {
+    font-family: 'ClashDisplay-Bold', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--headline);
+    margin-top: 0.4rem;
+}
+
+.teaser-see-all {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: var(--headline);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 4px;
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+.teaser-see-all:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.1);
+}
+
+.teaser-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 1.2rem;
+}
+
+.teaser-card {
+    grid-row: span 2;
+    background: var(--secondary);
+    border: 2px solid var(--tertiary);
+    border-radius: 20px;
+    padding: 2rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+.teaser-card:hover {
+    transform: translateY(-8px);
+    background: var(--bg);
+    box-shadow: 0 30px 60px rgba(39, 35, 67, 0.12);
+}
+
+.teaser-large {
+    grid-column: 1;
+    grid-row: 1/3; /* ligne 1 vers ligne 3 */
+    min-height: 460px;
+}
+
+.teaser-grid .teaser-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+.teaser-grid .teaser-card:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.teaser-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teaser-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--paragraph);
+    opacity: 0.55;
+}
+
+.teaser-icon {
+    color: var(--paragraph);
+    opacity: 0.4;
+    font-size: 0.85rem;
+    transition: transform 0.25s ease, opacity 0.25s ease, color 0.25s ease;
+}
+
+.teaser-card:hover .teaser-icon {
+    opacity: 1;
+    color: var(--accent);
+    transform: translate(6px, -6px);
+}
+
+.teaser-card h3 {
+    font-family: 'ClashDisplay-Semibold', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--headline);
+    margin-top: 1.5rem;
+}
+
+.teaser-card p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    color: var(--paragraph);
+    opacity: 0.75;
+    line-height: 1.6;
+    margin-top: 0.6rem;
+}
+
+.teaser-grid:hover .teaser-card{
+    opacity: 0.5;
+}
+.teaser-grid .teaser-card:hover{
+    opacity: 1;
+}
+
+@media screen and (max-width: 850px) {
+    .teaser-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .teaser-grid {
+        grid-template-columns: 1fr;
+    }
+    .teaser-large,
+    .teaser-grid .teaser-card:nth-child(2),
+    .teaser-grid .teaser-card:nth-child(3) {
+        grid-column: 1;
+        grid-row: auto;
+        /* avant : min-height: 460px restait figé même en 1 colonne,
+           laissant un immense vide dans la carte "Flip7" sur mobile */
+        min-height: 220px;
+    }
+}
+
+/* About Section */
+
+.about{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-hero-label{
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(0.6rem, 1vw, 0.85rem);
+    color: var(--paragraph);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.about-hero-title {
+  font-family: 'ClashDisplay-Bold', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 900;
+  color: var(--headline);
+  letter-spacing: -1px;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero-title em {
+  font-style: italic;
+  color: var(--tertiary);
+}
+
+.about-hero-desc {
+  /* clamp(0.1rem, 1rem, 3rem) ne bougeait jamais : la valeur médiane doit
+     être une unité fluide (vw) sinon clamp() reste bloqué sur elle */
+  font-size: clamp(0.95rem, 0.85rem + 0.6vw, 1.15rem);
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto;
+  font-weight: 300;
+  opacity: 0.8;
+  padding: 0 clamp(0px, 4vw, 24px) 3rem;
+}
+
+.stats-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.2rem var(--gutter) 3rem;
+    width: 100%;
+}
+
+.stat-card{
+    border-radius: 16px;
+    background-color: var(--secondary);
+    border: 2px solid #bae8e8;
+    text-align: center;
+    padding: 2rem 1.5rem;
+}
+.stat-number {
+    font-family: 'ClashDisplay-Bold', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 3rem);
+    font-weight: 900;
+    color: var(--headline);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--paragraph);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+@media (max-width: 910px) {
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        width: 100%
+    }
+}
+@media (max-width: 480px) {
+    /* 2 colonnes de stat-card devenaient trop étroites sur petit
+       téléphone (< 480px), les chiffres wrappaient bizarrement */
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+}
+/* Formation */
+
+.formation{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--paragraph);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    opacity: 0.6;
+    padding: 0 var(--gutter);
+}
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--tertiary);
+}
+
+.timeline {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    padding-left: 3rem;
+    padding-right: var(--gutter);
+    width: 100%;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 5px;
+  bottom: 3rem;
+  width: 2px;
+  background: var(--tertiary);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 1rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -3rem;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    color: var(--paragraph);
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.timeline-card {
+    background: var(--secondary);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s;
+}
+
+.timeline-card:hover {
+    border-color: var(--tertiary);
+    transform: translateX(4px);
+    background: var(--bg);
+    box-shadow: 0 8px 24px rgba(39, 35, 67, 0.08);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+.timeline-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--paragraph);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    opacity: 0.6;
+}
+.timeline-title {
+    font-size: clamp(1.1rem, 3vw, 1.35rem);
+    color: var(--headline);
+    font-weight: 700;
+}
+.timeline-place {
+    font-size: 0.88rem;
+    color: var(--paragraph);
+    opacity: 0.7;
+    margin-top: 0.2rem;
+}
+.timeline-desc {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    opacity: 0.85;
+}
+
+.tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    background: var(--bg);
+    border: 1px solid var(--tertiary);
+    color: var(--paragraph);
+    padding: 3px 10px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+.timeline-card:hover .tag {
+    background: var(--tertiary);
+    color: var(--headline);
+}
+
+.section-divider {
+    max-width: 1400px;
+    margin: 0 auto 3rem;
+    padding: 0 var(--gutter);
+}
+
+.divider-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--tertiary), transparent);
+}
+
+/* From Uiverse.io by WhiteNervosa */ 
+.customCheckBoxHolder {
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.customCheckBox {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  background-color: rgba(0, 0, 0, 0.16);
+  border-radius: 0px;
+  color: rgba(255, 255, 255, 0.7);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: color, background-color, box-shadow;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+  outline: none;
+  justify-content: center;
+  min-width: 55px;
+}
+
+.customCheckBox:hover {
+  background-color: var(--accent);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBox .inner {
+  font-size: 18px;
+  font-weight: 900;
+  font-family: 'Outfit', sans-serif;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: transform;
+  transform: translateY(0px);
+}
+
+.customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 0px;
+}
+
+.customCheckBoxInput {
+  display: none;
+}
+
+.customCheckBoxInput + .customCheckBoxWrapper .customCheckBox {
+  background-color: var(--paragraph);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+
+.customCheckBoxInput + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: var(--accent);
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+/* ── WRAP ── */
+.contact-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem var(--gutter) 7rem;
+    width: 100%;
+}
+
+/* ── HERO ── */
+.contact-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact-title {
+    font-family: 'ClashDisplay-Bold', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 900;
+    color: var(--headline);
+    letter-spacing: -1px;
+    margin-bottom: 1.25rem;
+}
+.contact-title em {
+    font-style: italic;
+    color: var(--tertiary);
+}
+
+/* ── GRILLE ── */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 2rem;
+    align-items: start;
+}
+
+
+/* ── FORMULAIRE ── */
+.contact-form-card {
+    /* min-width: 700px cassait tout le layout mobile : la carte forçait
+       le body à s'élargir et créait un scroll horizontal sur tout le
+       site. Le form doit suivre la largeur de sa colonne de grille. */
+    width: 100%;
+    background: var(--secondary);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 24px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact-form-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--headline);
+    margin-bottom: 0.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--paragraph);
+    opacity: 0.6;
+}
+
+.form-input,
+.form-textarea {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    color: var(--headline);
+    background: var(--bg);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 10px;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--paragraph);
+    opacity: 0.35;
+}
+.form-input:focus,
+.form-textarea:focus {
+    border-color: var(--headline);
+    box-shadow: 0 0 0 3px rgba(39, 35, 67, 0.07);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    background: var(--headline);
+    color: var(--accent);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+.form-submit:hover {
+    background: var(--accent);
+    color: var(--headline);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 216, 3, 0.35);
+}
+
+/* ── INFOS CONTACT ── */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contact-info-card {
+    background: var(--secondary);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: all 0.25s;
+
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s, background 0.2s;
+}
+
+.contact-info-card:hover {
+    border-color: var(--tertiary);
+    background: var(--bg);
+    box-shadow: 0 8px 24px rgba(39, 35, 67, 0.08);
+}
+
+.contact-info-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--bg);
+    border: 1.5px solid var(--tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--headline);
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s;
+}
+.contact-info-card:hover .contact-info-icon {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.contact-info-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--paragraph);
+    opacity: 0.5;
+    margin-bottom: 0.2rem;
+}
+
+.contact-info-value {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--headline);
+    text-decoration: none;
+    transition: opacity 0.2s;
+    word-break: break-word;
+}
+.contact-info-value:hover { opacity: 0.7; }
+
+
+/* ── RÉSEAUX ── */
+.contact-socials {
+    background: var(--secondary);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact-socials-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--paragraph);
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.contact-socials-row {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.social-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px 14px;
+    background: var(--bg);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 100px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--headline);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.social-pill:hover {
+    background: var(--headline);
+    color: var(--accent);
+    border-color: var(--headline);
+    transform: translateY(-2px);
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: var(--bg);
+  border: 1.5px solid var(--tertiary);
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--headline);
+  transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.social-btn:hover {
+  border-color: var(--headline);
+  background: var(--headline);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.xp-section {
+    margin: 5rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.xp-section-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--paragraph);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    opacity: 0.6;
+}
+.xp-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--tertiary);
+}
+
+/* ── COMPÉTENCES — ICON GRID ── */
+.xp-skills-box {
+    background: var(--secondary);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.xp-skills-cat-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--paragraph);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.6;
+}
+.xp-icons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.xp-skill-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    width: 96px;
+    padding: 1.1rem 0.5rem;
+    background: var(--bg);
+    border-radius: 14px;
+    transition: all 0.2s;
+}
+.xp-skill-icon:hover {
+    border-color: var(--headline);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(39, 35, 67, 0.1);
+}
+.xp-skill-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+.xp-skill-icon span {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--paragraph);
+    letter-spacing: 0.5px;
+    text-align: center;
+    opacity: 0.7;
+}
+.xp-skills-sep {
+    height: 1px;
+    background: var(--tertiary);
+}
+/* ── RESPONSIVE ── */
+
+/* la grille contact passait en 1 colonne seulement sous 900px alors que
+   la carte du formulaire (à cause du min-width supprimé ci-dessus) est
+   maintenant fluide ; on garde ce seuil mais on ajoute un palier pour
+   les tablettes où 1fr / 420px devient trop serré */
+@media (max-width: 1100px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info {
+        order: -1;
+    }
+}
+@media (max-width: 600px) {
+    .contact-wrap { padding: 3rem 1.2rem 5rem; }
+    .contact-form-card { padding: 1.75rem 1.25rem; }
+    .timeline { padding-left: 2.25rem; }
+    .timeline-dot { left: -2.25rem; }
+    .timeline-header { flex-direction: column; gap: 0.4rem; }
+}
+
+/* petits téléphones : réduit encore la gouttière et les cartes du
+   formulaire de contact / timeline pour éviter tout débordement */
+@media (max-width: 400px) {
+    :root {
+        --gutter: 16px;
+    }
+    .name-introduction { gap: 1rem; }
+    .hero-cta { gap: 8px; }
+    .cta-primary, .cta-secondary { padding: 10px 20px; }
+    .timeline-card { padding: 1.25rem; }
+}

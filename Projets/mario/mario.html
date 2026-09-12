@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Phomasone — Système de Particules</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/font/css/clash-display.css">
+    <link href="../../acceuil.css" rel="stylesheet">
+    <link href="mario.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <li><a href="#home">K<span>.</span></a></li>
+        </div>
+        <div class="nav-center">
+            <ul>
+                <li><a href="../../acceuil.html">Home</a></li>
+                <li><a href="../projet.html">Projets</a></li>
+                <li><a href="../../acceuil.html#about">À propos</a></li>
+            </ul>       
+        </div>
+        <div class="nav-right">
+            <button><li><a href="#contact">Contact</a></li></button>
+        </div>
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Menu Mobile-->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../../acceuil.html">Home</a>
+        <a href="../projet.html">Projets</a>
+        <a href="../../acceuil.html#about">À propos</a>
+        <a href="../../acceuil.html#contact" class="btn-contact-mob">Contact</a>
+    </div>
+
+    <div class="page-wrap">
+        <a href="../projet.html" class="back-link">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M1 7L7 1M1 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Retour aux projets
+        </a>
+
+        <div class="hero">
+            <div class="hero-left">
+            
+                <p class="hero-label">Mario Maker · BUT Informatique</p>
+                <h1 class="hero-title"><span style="color: #88ddfc; font-family: 'Clash Display', sans-serif";>Jeu de Plateforme</span><br><em>Mario Maker</em></h1>
+                <p class="hero-desc">Un jeu de plateforme inspiré de Super Mario Maker, développé en Python avec Pygame en première année. Éditeur de niveaux complet, deux types d'ennemis avec IA, système d'objets, musique originale composée par moi, et support manette Xbox 360.</p>
+                <div class="badge-row">
+                    <span class="badge">Python</span>
+                    <span class="badge">Pygame</span>
+                    <span class="badge orange">NSI · 1ère Année</span>
+                </div>
+                <div class="hero-btns">
+                    <a href="https://github.com/im-midnight/Mario_Maker-Python" target="_blank" class="btn-github">
+                        <i class="fab fa-github"></i> Voir sur GitHub
+                    </a>
+                </div>
+
+            </div>
+            
+            <div class="hero-right">
+                <div class="screenshot-main" id="mainShot">
+                    <video autoplay muted loop playsinline>
+                        <source src="../assets/python.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>  
+</body>
+    <script>
+        const menuHamburger = document.querySelector(".hamburger")
+        const navLinks = document.querySelector(".mobile-menu")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('open') // Rajout la classe mobile menu au variable navLinks
+        })
+        // Ferme le menu dès qu'on clique sur un lien à l'intérieur
+        const navLinksMobile = document.querySelectorAll('.mobile-menu a')
+        navLinksMobile.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open')
+            })
+        })
+    </script>
+</html>

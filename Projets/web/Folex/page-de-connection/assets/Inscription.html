@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&family=Roboto+Slab:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="../assets/connexion.css" rel="stylesheet">
+    
+    <title>Page d'inscription</title>
+ <!-- Feuille de style du bandeau -->
+    <link rel="stylesheet" href="../../bandeau/bandeau.css">
+</head>
+<body>
+
+    <!-- Intégration du bandeau -->
+    <iframe src="../../bandeau/bandeau.html" 
+            id="bandeau-frame" 
+            title="Bandeau"></iframe>  
+    
+    
+    <!-- Contenu principal -->
+    <main>
+        <div class="cadre" >
+            
+            <!-- Bloc texte -->
+            <div class="text" >
+                <h1>Bienvenue</h1>
+                <h2>
+                    Vous pouvez enregistrer un nouveau compte ou vous connecter 
+                    avec "Se connecter".
+                </h2>
+            </div> 
+            
+            <!-- Formulaire -->
+            <form action="#" method="post" class="register">
+                <span id="iden">S'inscrire</span>
+                
+                <input type="text" name="mail" placeholder="Entrer votre mail">
+                <input type="password" name="mdp" placeholder="Entrer votre mot de passe">
+                <input type="password" name="cmdp" placeholder="Confirmer votre mot de passe">
+
+                                <div class="cgu-container">
+                                    <label class="cgu-label">
+                                        <input type="checkbox" id="cgu" name="cgu" required>
+                                        J'accepte les <a href="#" target="_blank">conditions d'utilisation</a>
+                                    </label>
+                                </div>
+                
+                <a id="valider" href="../../page-acceuil/acceuil.html">Valider</a>
+                <a id="connecter" href="../../Connexion.html">Se connecter</a>
+            </form>
+            
+        </div>
+    </main>
+    
+</body>
+</html>

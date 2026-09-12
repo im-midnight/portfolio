@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Phomasone — Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/font/css/clash-display.css">
+    <link href="../../acceuil.css" rel="stylesheet">
+    <link href="web.css" rel="stylesheet">
+</head>
+<body>
+     <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <li><a href="../acceuil.html">K<span>.</span></a></li>
+        </div>
+        <div class="nav-center">
+            <ul>
+                <li><a href="../../acceuil.html">Home</a></li>
+                <li><a href="../projet.html">Projets</a></li>
+                <li><a href="../../acceuil.html#about">À propos</a></li>
+            </ul>  
+        </div>
+        <div class="nav-right">
+            <button><li><a href="../../acceuil.html#contact">Contact</a></li></button>
+        </div>
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Menu Mobile-->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="../../acceuil.html">Home</a>
+        <a href="../projet.html">Projets</a>
+        <a href="../../acceuil.html#about">À propos</a>
+        <a href="../../acceuil.html#contact" class="btn-contact-mob">Contact</a>
+    </div>
+
+    <div class="parent">
+        
+        <div class="page-wrap">
+            <a href="../projet.html" class="back-link">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M1 7L7 1M1 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Retour aux projets
+            </a>
+            <div class="cent">
+                <div class="hero-label">04 — Projets Web · HTML / CSS / JS</div>
+                <h1 class="hero-title">Mes Sites<br><em>Web</em></h1>
+                <p class="hero-desc">Petites applications web développées en HTML, CSS et JavaScript. Clique sur une carte pour voir le site en direct</p>
+            </div>
+
+            
+            <div class="sites-grid" id="sitesGrid">
+                <div class="site-card">
+                    <div class="card-preview">
+                        <div class="card-preview-bar">
+                            <div class="preview-dot" style="background:#ff5f57"></div>
+                            <div class="preview-dot" style="background:#febc2e"></div>
+                            <div class="preview-dot" style="background:#28c840"></div>
+                        </div>
+                        <div class="card-iframe-wrap">
+                            <iframe src="Folex/page-acceuil/acceuil.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+                        <div class="card-overlay">
+                            <a href="Folex/page-acceuil/acceuil.html" target="_blank" class="card-link overlay-label">
+                                Ouvrir
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-accent" style="background: linear-gradient(90deg,#4ade80,#16a34a)"></div>
+                        <div class="card-name">Site Web de Montre</div>
+                        <p class="card-desc">Projet de Site marchandise - Apprentissage du css</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =============================================
+                    CARTE 1 — BMI Calculator
+                    Remplace "bmi/index.html" par ton vrai chemin
+                    ============================================= -->
+                <div class="site-card">
+                    <div class="card-preview">
+                        <div class="card-preview-bar">
+                            <div class="preview-dot" style="background:#ff5f57"></div>
+                            <div class="preview-dot" style="background:#febc2e"></div>
+                            <div class="preview-dot" style="background:#28c840"></div>
+                        </div>
+                        <div class="card-iframe-wrap">
+                            <iframe src="realbmi/index.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+
+                        <div class="card-overlay">
+                            <a href="realbmi/index.html" target="_blank" class="card-link overlay-label">
+                                Ouvrir
+                            </a>
+                        </div>
+           
+                    </div>
+                    <div class="card-info">
+                        <div class="card-accent" style="background: linear-gradient(90deg,#fb923c,#ef4444)"></div>
+                        <div class="card-name">BMI Calculator</div>
+                        <p class="card-desc">Calcul de l'indice de masse corporelle en fonction du poids et de la taille.</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =============================================
+                    CARTE 2 — Calculatrice
+                    Remplace "calculatrice/index.html" par ton vrai chemin
+                    ============================================= -->
+                <div class="site-card">
+                    <div class="card-preview">
+                        <div class="card-preview-bar">
+                            <div class="preview-dot" style="background:#ff5f57"></div>
+                            <div class="preview-dot" style="background:#febc2e"></div>
+                            <div class="preview-dot" style="background:#28c840"></div>
+                        </div>
+                        <div class="card-iframe-wrap">
+                            <iframe src="Calculator/index.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+                        <div class="card-overlay">
+                            <a href="Calculator/index.html" target="_blank" class="card-link overlay-label">
+                                Ouvrir
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-accent" style="background: linear-gradient(90deg,#38bdf8,#0284c7)"></div>
+                        <div class="card-name">Calculatrice</div>
+                        <p class="card-desc">Calculatrice simple avec les opérations de base : addition, soustraction, multiplication, division.</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- =============================================
+                    CARTE 3 — Convertisseur de température
+                    Remplace "convertisseur/index.html" par ton vrai chemin
+                    ============================================= -->
+                <div class="site-card">
+                    <div class="card-preview">
+                        <div class="card-preview-bar">
+                            <div class="preview-dot" style="background:#ff5f57"></div>
+                            <div class="preview-dot" style="background:#febc2e"></div>
+                            <div class="preview-dot" style="background:#28c840"></div>
+                        </div>
+                        <div class="card-iframe-wrap">
+                            <iframe src="temperature/index.html" tabindex="-1" aria-hidden="true"></iframe>
+                        </div>
+                        <div class="card-overlay">
+                            <a href="temperature/index.html" target="_blank" class="card-link overlay-label">
+                                Ouvrir
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-accent" style="background: linear-gradient(90deg,#4ade80,#16a34a)"></div>
+                        <div class="card-name">Convertisseur de Température</div>
+                        <p class="card-desc">Conversion des températures entre Celsius, Fahrenheit et Kelvin en temps réel.</p>
+                        <div class="card-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+    <script>
+        const menuHamburger = document.querySelector(".hamburger")
+        const navLinks = document.querySelector(".mobile-menu")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('open') // Rajout la classe mobile menu au variable navLinks
+        })
+        // Ferme le menu dès qu'on clique sur un lien à l'intérieur
+        const navLinksMobile = document.querySelectorAll('.mobile-menu a')
+        navLinksMobile.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open')
+            })
+        })
+    </script>
+</html>

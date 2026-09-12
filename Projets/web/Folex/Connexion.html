@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&family=Roboto+Slab:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="page-de-connection/assets/connexion.css" rel="stylesheet">
+    <title>Page de connexion</title>
+
+
+    <!-- Feuille de style du bandeau -->
+    <link rel="stylesheet" href="bandeau/bandeau.css">
+</head>
+<body>
+
+    <!-- Intégration du bandeau -->
+    <iframe src="bandeau/bandeau.html" 
+            id="bandeau-frame" 
+            title="Bandeau"></iframe>  
+		<div class="wrapper">
+			<div class="cadre">
+				<div class="text">
+					<h1>Bienvenue</h1>
+					<h2>Vous pouvez vous connecter ou enregistrer un nouveau compte avec "S'inscrire".</h2>
+				</div> 
+				
+				<form  action="#" method="post" class="register">
+					<span id="idenc">Se connecter</span>
+					<input type="text" name="nomc" placeholder="Entrer votre nom d'utilisateur">
+			 
+					<input type="password" name="mdpc" placeholder="Entrer votre mot de passe">
+					<span id="oublie"><a id="oublie2" href="page-de-connection/assets/oublie.html">Mot de passe oublié ?</a></span>
+					<a id="google" href="#">
+					<img id="imgoogle" src="page-de-connection/assets/ggl.webp" alt="Logo Google">
+					<span>Se connecter avec Google</span>
+					</a>
+					<a id="valider" href="page-acceuil/acceuil.html" style="padding: 4.5px;">Valider</a>
+					<a id="connecter" href="page-de-connection/assets/Inscription.html " style="color: black;padding: 2px;">S'inscrire </a>
+				</form>
+				
+			</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class = "page">
+        <div class = "donnees">
+            <h1>Temperature Converter</h1>
+            <select class ="premier" id="Premier">
+                <option value="CEL" selected>Celsius</option>
+                <option class = "test" value="FAH">Fahrenheit</option>
+                <option class = "test" value="KEL">Kelvin</option>
+            </select>
+
+            <input type="number" class = "input" id="premier_temp" >
+            <p>TO</p>
+
+            <select class ="deuxieme" id="Deuxieme">
+                <option value="FAH" selected>Fahrenheit</option>
+                <option value="CEL">Celsius</option>
+                <option value="KEL">Kelvin</option>
+            </select>
+
+            <input type="number" class = "input "id="deuxieme_temp" >  
+            <br></br> 
+            <button class = "bouton" onclick="convertir()">Convertir</button>
+            <button class = "bouton2" onclick="reset()">RESET</button>
+
+        </div>
+    </div>
+</body>
+</html>

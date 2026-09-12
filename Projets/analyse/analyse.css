@@ -1,0 +1,215 @@
+/* particule.css — page projet "Analyse de Réseau Social"
+   Réutilise les variables et polices définies dans style.css
+   (chargé avant celui-ci dans le <head>), on ne redéfinit rien ici. */
+
+.page-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 9rem var(--gutter) 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Lien retour ── */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--paragraph);
+    opacity: 0.6;
+    text-decoration: none;
+    margin-bottom: 3rem;
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    /* le lien retour reste aligné à gauche même si tout le reste
+       de la page est centré */
+    align-self: flex-start;
+}
+.back-link svg {
+    transition: transform 0.2s ease;
+}
+.back-link:hover {
+    opacity: 1;
+    color: var(--headline);
+    transform: translateX(-2px);
+}
+.back-link:hover svg {
+    transform: translateX(-3px);
+}
+
+/* ── Hero du projet (titre centré, plus de grid 2 colonnes) ── */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.1rem;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.hero-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--paragraph);
+    opacity: 0.55;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'ClashDisplay-Bold', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 700;
+    color: var(--headline);
+    line-height: 1.08;
+}
+.hero-title em {
+    font-style: italic;
+}
+
+.hero-desc {
+    font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.05rem);
+    line-height: 1.75;
+    margin: 2rem;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-top: 0.3rem;
+    text-align: center;
+}
+/* ── Badges tech ── */
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--headline);
+    background: var(--secondary);
+    border: 1.5px solid var(--tertiary);
+    border-radius: 100px;
+    padding: 6px 14px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.badge:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+.badge.purple {
+    background: var(--tertiary);
+}
+.badge.orange {
+    background: var(--bg);
+    border-color: var(--accent);
+}
+
+/* ── Boutons ── */
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 28px;
+    background: var(--headline);
+    color: var(--accent);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-github:hover {
+    background: var(--accent);
+    color: var(--headline);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 35, 67, 0.2);
+}
+
+/* ── 3 photos des réseaux sociaux ── */
+.social-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 3.5rem auto 0;
+    width: 100%;
+}
+
+.social-photo {
+    border-radius: 16px;
+    border: 1.5px solid var(--tertiary);
+    background: var(--secondary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social-photo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(39, 35, 67, 0.12);
+}
+
+.social-photo img {
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.social-photo-caption {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--paragraph);
+    opacity: 0.6;
+    padding: 0.8rem 0;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 900px) {
+    .social-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .social-photos {
+        grid-template-columns: 1fr;
+    }
+    .social-photo img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-wrap {
+        padding: 2rem 20px 4rem;
+    }
+    .hero-btns,
+    .badge-row {
+        gap: 8px;
+    }
+    .btn-github {
+        width: 100%;
+        justify-content: center;
+    }
+}

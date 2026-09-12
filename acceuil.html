@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Phomasone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/font/css/clash-display.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="acceuil.css" rel="stylesheet">
+</head>
+<body>
+    <div id="progress"></div>
+    <div class="container" id="container">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <li><a href="#home">K<span>.</span></a></li>
+            </div>
+            <div class="nav-center">
+                <ul>
+                    <li><a href="acceuil.html">Home</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#about">À propos</a></li>
+                </ul>       
+            </div>
+            <div class="nav-right">
+                <button><li><a href="#contact">Contact</a></li></button>
+            </div>
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <!-- Menu Mobile-->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#container">Home</a>
+            <a href="#projets">Projets</a>
+            <a href="#about">À propos</a>
+            <a href="#contact" class="btn-contact-mob">Contact</a>
+        </div>
+
+        <section class="block home" id="home">
+   
+            <div class="name-introduction">
+                <h1 class="name">
+                    PHOMASONE<br>
+                    <span class="accent">KEVIN</span>
+                </h1>
+                <p class="subtitle">Étudiant en 1ère année · BUT Informatique</p>
+                <div class="hero-cta">
+                    <a href="#projets" class="cta-primary">Voir mes projets</a>
+                    <a href="assets/Portfolio.pdf" class="cta-secondary">Télécharger CV</a>
+                </div>
+            </div>
+
+            <div class="img">
+                <div class="image-wrapper">
+                    <img src="assets/icon.jpg">
+                </div>
+            </div>
+            
+        </section>
+        
+         <div class="section-divider" >
+            <div class="divider-line" id="projets">
+            </div>
+        </div>
+
+        <section class="block projets reveal">
+            <div class="projets-teaser">
+                <div class="teaser-header">
+                    <div>
+                        <span class="teaser-eyebrow">Mes projets</span>
+                        <h2 class="teaser-title-main">Ce que j'ai construit</h2>
+                    </div>
+                    <a href="Projets\projet.html" class="teaser-see-all">
+                        Voir tous les projets <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="teaser-grid">
+
+                    <a href="Projets/projet.html#flip7" class="teaser-card teaser-large">
+                        <div class="teaser-card-top">
+                            <span class="teaser-tag">Kotlin - JavaFX</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square teaser-icon"></i>
+                        </div>
+                        <h3>Flip7</h3>
+                        <p>Jeu de cartes en équipe, architecture MVC, scoreboard dynamique et graphiques de score.</p>
+                    </a>
+
+                    <a href="Projets/projet.html#platformer" class="teaser-card">
+                        <div class="teaser-card-top">
+                            <span class="teaser-tag">Python</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square teaser-icon"></i>
+                        </div>
+                        <h3>Platformer</h3>
+                        <p>Jeu style Mario Maker, réalisé en équipe. Musique originale composée par mes soins.</p>
+                    </a>
+
+                    <a href="Projets/projet.html#graph" class="teaser-card">
+                        <div class="teaser-card-top">
+                            <span class="teaser-tag">Python - Graphviz</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square teaser-icon"></i>
+                        </div>
+                        <h3>Analyse de réseau social</h3>
+                        <p>Graphe non orienté, Dijkstra, Bellman-Ford et visualisation des communautés.</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        
+         <div class="section-divider">
+            <div class="divider-line" id="about">
+            </div>
+        </div>
+
+
+        <section class="block about reveal" >
+            <p class="about-hero-label">Qui suis-je</p>
+            <h1 class="about-hero-title">À propos de <em>Moi</em></h1>
+            <p class="about-hero-desc">Bonjour, je m'appelle Phomasone Kevin.<br><br>
+                J'étudie actuellement en BUT Informatique. Cette formation me permet de bien 
+                comprendre le développement logiciel et la gestion de projets techniques.<br><br>
+                Je suis vraiment passionné par le code et la création numérique. 
+                Ce qui me passionne le plus, c'est de créer des projets qui combinent 
+                la technique et la créativité. Je suis curieux et je travaille bien tout seul. 
+            </p>
+
+
+            <!-- Stats -->
+            <div class="stats-section">
+                <div class="block stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Année d'études supérieures</div>
+                </div>
+                <div class="block stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Projets réalisés</div>
+                </div>
+                <div class="block stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Langages maîtrisés</div>
+                </div>
+                <div class="block stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Motivation</div>
+                </div>
+            </div>
+
+        </section>
+        
+        <div class="section-divider">
+            <div class="divider-line">
+            </div>
+        </div>
+
+
+        <section class="block formation reveal" id="formation">
+            <p class="section-title">Formation</p>
+            <div class="timeline">
+
+                <div class="timeline-item ">
+                    <div class="timeline-dot">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <p class="timeline-date">2024 — 2027</p>
+                                <h3 class="timeline-title">BUT Informatique</h3>
+                                <p class="timeline-place">IUT — Nantes</p>
+                            </div>
+                        </div>
+                        
+                        <p class="timeline-desc">Formation universitaire technologique en informatique. Programmation, algorithmes, mathématiques, bases de données, réseaux, gestion de projet et développement web.</p>
+                        
+                        <div class="customCheckBoxHolder">
+
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">Python</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB2" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB2">
+                                <div class="customCheckBox">
+                                    <div class="inner">Golang</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB3" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB3">
+                                <div class="customCheckBox">
+                                    <div class="inner">Kotlin</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB3" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB3">
+                                <div class="customCheckBox">
+                                    <div class="inner">C</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB3" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB3">
+                                <div class="customCheckBox">
+                                    <div class="inner">SQL</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB3" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB3">
+                                <div class="customCheckBox">
+                                    <div class="inner">HTML/CSS</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB3" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB3">
+                                <div class="customCheckBox">
+                                    <div class="inner">JAVASCRIPT</div>
+                                </div>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div>
+                                <p class="timeline-date">2021 — 2024</p>
+                                <h3 class="timeline-title">Baccalauréat</h3>
+                                <p class="timeline-place">Lycée Joliot Curie - Rennes</p>
+                            </div>
+                        </div>
+                        <p class="timeline-desc">Mention Bien : 20 en Math - 18 en NSI</p>
+                        <p class="timeline-desc">Spécialités Numérique et Sciences Informatiques (NSI) et Mathématiques. Première expérience de la programmation, algorithmique et bases de données.</p>
+                        <div class="customCheckBoxHolder">
+
+                            <input class="customCheckBoxInput" id="cCB1" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB1">
+                                <div class="customCheckBox">
+                                    <div class="inner">Python</div>
+                                </div>
+                            </label>
+
+                            <input class="customCheckBoxInput" id="cCB2" type="checkbox">
+                            <label class="customCheckBoxWrapper" for="cCB2">
+                                <div class="customCheckBox">
+                                    <div class="inner">SQL</div>
+                                </div>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="section-divider">
+            <div class="divider-line">
+            </div>
+        </div>
+        
+        <section class="xp-section">
+            <p class="xp-section-title">Compétences</p>
+            <div class="xp-skills-box">
+
+                <div class="xp-skills-category">
+                    <p class="xp-skills-cat-title"><i class="fas fa-terminal"></i> Langages</p>
+                    <div class="xp-icons-grid">
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/npm/@programming-languages-logos/c@0.0.3/c.svg" alt="C">
+                            <span>C</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
+                            <span>Kotlin</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Golang">
+                            <span>Golang</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xp-skills-sep"></div>
+
+                <div class="xp-skills-category">
+                    <p class="xp-skills-cat-title"><i class="fas fa-globe"></i> Web</p>
+                    <div class="xp-icons-grid">
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                            <span>HTML</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xp-skills-sep"></div>
+
+                <div class="xp-skills-category">
+                    <p class="xp-skills-cat-title"><i class="fas fa-database"></i> Bases de données</p>
+                    <div class="xp-icons-grid">
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/npm/js-devicon@2.7.4/icons/mysql/mysql-original-wordmark.svg" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle">
+                            <span>Oracle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xp-skills-sep"></div>
+
+                <div class="xp-skills-category">
+                    <p class="xp-skills-cat-title"><i class="fas fa-wrench"></i> Outils</p>
+                    <div class="xp-icons-grid">
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                            <span>Git</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                            <span>GitHub</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                            <span>VS Code</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/npm/@jetbrains/logos@3.0.1/intellij-idea/intellij-idea.svg" alt="Intellij">
+                            <span>Intellij</span>
+                        </div>
+                        <div class="xp-skill-icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+                            <span>Linux</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="section-divider">
+            <div class="divider-line">
+            </div>
+        </div>
+
+        <section class="block contact reveal" id="contact">
+            <div class="contact-wrap">
+
+                <!-- HERO -->
+                <div class="contact-hero">
+                    <h1 class="contact-title">Me <em>Contacter</em></h1>
+                </div>
+
+                <!-- GRILLE PRINCIPALE -->
+                <div class="contact-grid">
+                    <form action="https://formspree.io/f/meewqwpe" method="post">
+                        <!-- FORMULAIRE -->
+                        <div class="contact-form-card">
+                            <p class="contact-form-title">Envoyer un message</p>
+
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nom</label>
+                                <input id="name" name="name" type="text" class="form-input" placeholder="Phomasone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Adresse email</label>
+                                <input  id="email" name="email" type="email" class="form-input" placeholder="phomasone.kevin@gmail.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Sujet</label>
+                                <input id="subject" name="subject" class="form-input" placeholder="Collaboration, question...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Votre message ici..."></textarea>
+                            </div>
+
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <button type="submit" class="form-submit">
+                                <i class="fas fa-paper-plane"></i>
+                                Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- INFOS CONTACT -->
+                    <div class="contact-info">
+
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <p class="contact-info-label">GitHub</p>
+                                <a href="https://github.com/im-midnight" target="_blank" class="contact-info-value">github.com/im-midnight</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fab fa-linkedin"></i></div>
+                            <div>
+                                <p class="contact-info-label">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/phomasone-kevin-537251385/"" class="contact-info-value">Kevin Phomasone</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <p class="contact-info-label">Email</p>
+                                <a href="mailto:phomasone.kevin@gmail.com" class="contact-info-value">phomasone.kevin@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- RÉSEAUX -->
+                        <div class="contact-socials">
+                            <p class="contact-socials-title">Retrouvez-moi</p>
+                            <div class="contact-socials-row">
+                                <a href="https://www.facebook.com/profile.php?id=100073947349521&sk=directory_intro" class="social-btn">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="https://www.instagram.com/im._.kebin/" class="social-btn">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+    </div>
+    
+</body>
+    <script>
+        // Menu hamburger
+        const menuHamburger = document.querySelector(".hamburger")
+        const navLinks = document.querySelector(".mobile-menu")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('open') // Rajout la classe mobile menu au variable navLinks
+        })
+        // Ferme le menu dès qu'on clique sur un lien à l'intérieur
+        const navLinksMobile = document.querySelectorAll('.mobile-menu a')
+        navLinksMobile.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open')
+            })
+        })
+
+        // Scroll animation
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach((entry)=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add("show")
+                }else{
+                    entry.target.classList.remove("show")
+                }
+            })
+        })
+        const elements = document.querySelectorAll(".reveal")
+        elements.forEach(el => observer.observe(el))
+    </script>
+    
+            
+
+</html>
