@@ -104,6 +104,7 @@
 }
 
 .card-title {
+    font-family: 'ClashDisplay-Semibold', sans-serif;
     font-size: clamp(1.4rem, 2.5vw, 2rem);
     font-weight: 700;
     color: var(--headline);
