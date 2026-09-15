@@ -1258,7 +1258,7 @@ li{
        (--headline) + accent, pour trancher avec le reste du site qui
        est clair */
     background: var(--headline);
-    background-image: url(assets/background-footer.jpg);
+    background-image: url(assets/background-footer.webp);
     background-size: cover;
     background-position: center; /* ex: montre le bas de l'image */
     background-repeat: no-repeat;
