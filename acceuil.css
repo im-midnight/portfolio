@@ -447,7 +447,7 @@ li{
 
 .teaser-see-all {
     font-family: 'DM Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.5px;
     color: var(--headline);
     text-decoration: none;
@@ -1250,6 +1250,135 @@ li{
 .xp-skills-sep {
     height: 1px;
     background: var(--tertiary);
+}
+/* Footer */
+
+.footer {
+    /* même logique de contraste que .nav-right button : fond foncé
+       (--headline) + accent, pour trancher avec le reste du site qui
+       est clair */
+    background: var(--headline);
+    background-image: url(assets/background-footer.jpg);
+    background-size: cover;
+    background-position: center; /* ex: montre le bas de l'image */
+    background-repeat: no-repeat;
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+    text-align: center;
+    padding: 3.5rem var(--gutter) 2.5rem;
+}
+
+.footer .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* icônes sociales */
+.footer .row a {
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.footer .row a:hover{
+    color: #272343;
+    transform: translateY(-5px);
+}
+
+.footer .row ul{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+}
+
+.footer .row ul li a {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    color: rgb(62, 62, 62);
+    background-color: var(--bg);
+    border-radius: 100px;
+    padding: 8px 18px;
+}
+
+.footer .row ul li a:hover {
+    opacity: 1;
+    
+}
+
+.footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+}
+.social-btn2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: var(--bg);
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--headline);
+  transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.social-btn:hover2 {
+  border-color: var(--headline);
+  background: var(--headline);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+/* ligne de copyright */
+.footer .row:last-child {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width:720px){
+    .footer{
+        text-align:left;
+        align-items: flex-start;
+        padding:5%;
+    }
+    .footer .row {
+        justify-content: flex-start;
+    }
+    .footer .row ul{
+        justify-content: flex-start;
+    }
+    .footer .row ul li{
+        display:block;
+        margin:10px 0px;
+        text-align:left;
+    }
+    .footer .row a i{
+        margin:0% 3%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .footer {
+        gap: 1.25rem;
+    }
+    .footer .row a i {
+        font-size: 1.7em;
+    }
 }
 /* ── RESPONSIVE ── */
 

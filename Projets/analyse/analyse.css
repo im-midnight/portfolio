@@ -5,7 +5,7 @@
 .page-wrap {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 9rem var(--gutter) 4rem;
+    padding: 5rem var(--gutter) 4rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     align-items: center;
     gap: 8px;
     font-family: 'DM Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: var(--paragraph);
@@ -50,16 +50,6 @@
     gap: 1.1rem;
     max-width: 780px;
     margin: 0 auto;
-}
-
-.hero-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.78rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--paragraph);
-    opacity: 0.55;
-    text-align: center;
 }
 
 .hero-title {
