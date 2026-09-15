@@ -951,6 +951,7 @@ li{
 }
 
 .contact-form-title {
+    font-family: 'DM Mono', monospace;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--headline);
@@ -1304,7 +1305,7 @@ li{
 }
 
 .footer .row ul li a {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'DM Mono', monospace;
     font-size: 0.9rem;
     color: rgb(62, 62, 62);
     background-color: var(--bg);
@@ -1344,7 +1345,7 @@ li{
 }
 /* ligne de copyright */
 .footer .row:last-child {
-    font-family: 'DM Mono', monospace;
+    font-family: 'Outfit', sans-serif;
     font-size: 1.2rem;
     letter-spacing: 0.5px;
 }
